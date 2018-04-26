@@ -1,12 +1,20 @@
 //log直接代替console。log
 var log = console.log.bind(console)
 
-//用e进行元素选择
-var e = function (selector) {
+//封装常用函数
+var e = function(selector) {
     var element = document.querySelector(selector)
     return element
 }
-
+var es = function(selector) {
+    var elements = document.querySelectorAll(selector)
+    return elements
+}
+var bindAll = function(elements, eventName, callBack) {
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener(eventName, callBack)
+    }
+}
 
 var lower = 'abcdefghijklmnopqrstuvwxyz'
 var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'

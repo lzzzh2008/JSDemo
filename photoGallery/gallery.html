@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .image-show {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+        .image-item {
+            width: 200px;
+            height: 100px;
+            transition:transform 0.5s;
+        }
+        .image-item:hover {
+            transform: scale(1.1);
+    
+        }
+        .item {
+            display: inline-block;
+        }
+        .photo-list {
+            text-align: center;
+        }
+        .show {
+            border: 2px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="image-show">
+            <img src="1.png" alt="" class="image-content">
+        </div>
+        <div class="photo-list">
+            <div class="item">
+                <img class="image-item show" src="1.png" alt="1 png">
+            </div>
+            <div class="item">
+                <img class="image-item" src="2.png" alt="2 png">
+            </div>
+            <div class="item">
+                <img class="image-item" src="3.png" alt="3 png">
+            </div>
+        </div>
+    </div>
+    <script src="../myUtil.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
