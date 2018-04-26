@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tagList</title>
+    <style>
+        .btn {
+            display:inline-block;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+            padding: 0 10px;
+            border: 1px solid #454545;
+        }
+        .content-list {
+            border: 1px solid #454545;
+        }
+        .content {
+            display: none;
+            text-align: center;
+        }
+        .show {
+            display: block;
+        }
+        .active {
+            background: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="buttun-list">
+            <button class="btn active" data-tag="#tag-content1">小学</button>
+            <button class="btn" data-tag="#tag-content2">中学</button>
+            <button class="btn" data-tag="#tag-content3">大学</button>
+        </div>
+        <div class="content-list">
+            <div class='content show' id="tag-content1">
+                <p>可爱的小学生</p>
+            </div>
+            <div class='content' id="tag-content2">
+                <p>聪明的中学生</p>
+            </div>
+            <div class='content' id="tag-content3">
+                <p>成熟的大学生</p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
