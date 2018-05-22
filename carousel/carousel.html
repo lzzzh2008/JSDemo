@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
-        <img class="img-1" data-total="3"></img>
-        <img class="img-2" data-total="3"></img>
-        <img class="img-3" data-total="3"></img>
+    <div class="main" data-imgs="3" data-active="0">
+        <img id="img-0" src="1.jpg" class="show"></img>
+        <img id="img-1" src="2.jpg" class=""></img>
+        <img id="img-2" src="3.jpg" class=""></img>
+        <button class="btn previous" data-offset="-1">&lt;</button>
+        <button class="btn next" data-offset="1">&gt;</button>
+        <div class="sectors">
+            <div id="indi-0" class="point active" data-indi="0"></div>
+            <div id="indi-1" class="point" data-indi="1"></div>
+            <div id="indi-2" class="point" data-indi="2"=""></div>
+        </div>
     </div>
+
     <script src="../myUtil.js"></script>
     <script src="./main.js"></script>
 </body>

@@ -1,1 +1,50 @@
-s
+body {
+    text-align: center;
+}
+img {
+    display: none;
+}
+.main {
+    display:inline-block;
+    position: relative;
+    width: 440px;
+}
+.show {
+    display: inline-block;
+}
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: aliceblue;
+    opacity: 0.6;
+    cursor: pointer;
+    width: 30px;
+    height: 60px;
+    font-size: 15px;
+    border: none;
+}
+.previous {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+.sectors {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+.point {
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.active {
+    background: white;
+}

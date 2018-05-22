@@ -4,7 +4,12 @@ var log = console.log.bind(console)
 //封装常用函数
 var e = function(selector) {
     var element = document.querySelector(selector)
-    return element
+    if (element == null) {
+        var s = `元素没找到，选择器 ${selector} 没有找到或者 js 没有放在 body 前面`
+        alert(s)
+    } else {
+        return element
+    }
 }
 var bindEvent = function(element, eventName, callback) {
     element.addEventListener(eventName, callback)
@@ -12,12 +17,19 @@ var bindEvent = function(element, eventName, callback) {
 //批量选择元素
 var es = function(selector) {
     var elements = document.querySelectorAll(selector)
-    return elements
+    if (elements.length == 0) {
+        var s = `元素没找到，选择器 ${selector} 没有找到或者 js 没有放在 body 前面`
+        alert(s)
+    } else {
+        return elements
+    }
 }
 //批量绑定事件
-var bindAll = function(elements, eventName, callBack) {
+var bindAll = function(selector, eventName, callback) {
+    var elements = es(selector)
     for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener(eventName, callBack)
+        var e = elements[i]
+        bindEvent(e, eventName, callback)
     }
 }
 //插入html
