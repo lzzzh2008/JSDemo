@@ -1,9 +1,3 @@
-var log = console.log.bind(console)
-var e = function(selector) {
-    var element = document.querySelector(selector)
-
-    return element
-}
 var template = function(todo) {
     var t = `
     <div class="todo-cell">
@@ -77,3 +71,4 @@ container.addEventListener('click', function (event) {
     }
 
 })
+
